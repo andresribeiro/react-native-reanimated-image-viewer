@@ -57,5 +57,5 @@ export default function App() {
 | `imageUrl` | `undefined` | `string` | `true`
 | `width` | `undefined` | `number` | `true`
 | `height` | `undefined` | `number` | `true`
-| `onRequestClose` | `undefined` | `() => void` | `true`
-| `onSingleTap` | `undefined` | `() => void` | `false`
+| `onRequestClose` | `undefined` | `() => unknown` | `true`
+| `onSingleTap` | `undefined` | `() => unknown` | `false`

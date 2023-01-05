@@ -14,8 +14,8 @@ export type ImageViewerProps = {
 	imageUrl: string;
 	width: number;
 	height: number;
-	onRequestClose: () => void;
-	onSingleTap?: () => void;
+	onRequestClose: () => unknown;
+	onSingleTap?: () => unknown;
 };
 
 export default function ImageViewer({
