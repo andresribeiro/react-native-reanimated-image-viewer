@@ -14,16 +14,16 @@ export type ImageViewerProps = {
 	imageUrl: string;
 	width: number;
 	height: number;
-  onRequestClose: () => void
-  onSingleTap?: () => void
+	onRequestClose: () => void;
+	onSingleTap?: () => void;
 };
 
 export default function ImageViewer({
 	imageUrl,
 	width,
 	height,
-  onSingleTap,
-  onRequestClose
+	onSingleTap,
+	onRequestClose,
 }: ImageViewerProps) {
 	const dimensions = useWindowDimensions();
 
@@ -199,7 +199,7 @@ export default function ImageViewer({
 		});
 
 	const singleTap = Gesture.Tap().onEnd(() => {
-		onSingleTap && runOnJS(onSingleTap)()
+		onSingleTap && runOnJS(onSingleTap)();
 	});
 
 	const doubleTap = Gesture.Tap()
@@ -285,12 +285,13 @@ export default function ImageViewer({
 	return (
 		<GestureDetector gesture={allGestures}>
 			<Animated.View
-        style={{
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#000'
-        }}>
+				style={{
+					flex: 1,
+					alignItems: "center",
+					justifyContent: "center",
+					backgroundColor: "#000",
+				}}
+			>
 				<Animated.View style={imageContainerAnimatedStyle}>
 					<Animated.Image
 						style={[
