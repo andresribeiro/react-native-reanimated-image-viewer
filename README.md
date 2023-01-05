@@ -14,22 +14,26 @@ https://user-images.githubusercontent.com/63297375/210002857-2ab01afa-420a-40c9-
 
 ### About 🗞️
 
-Rather than a library, I decided to release it as a single file, ready to be copied and pasted into any project. I don't intend to upgrade drastically, as it's a simple component, but at the same time it has everything you could ever need. Created for my social network app, [Drakkle](https://play.google.com/store/apps/details?id=com.andresribeiro.drakkle)
+Uses Reanimated and Gesture Handler under the hood. Created for my social network app, [Drakkle](https://play.google.com/store/apps/details?id=com.andresribeiro.drakkle)
 
 ### Installation ⚙️
 
-Copy the ImageViewer.tsx file and paste it into your project. You will need [Reanimated](https://github.com/software-mansion/react-native-reanimated) and [Gesture Handler](https://github.com/software-mansion/react-native-gesture-handler) installed in your project
+```bash
+yarn add react-native-reanimated-image-viewer
+```
+
+You will need [Reanimated](https://github.com/software-mansion/react-native-reanimated) and [Gesture Handler](https://github.com/software-mansion/react-native-gesture-handler) installed in your project
 
 ### Usage 🔨
 
-Import the ImageViewer.tsx into a new screen. You can also use a Modal, but you will need to [configure the Gesture Handler on Android](https://docs.swmansion.com/react-native-gesture-handler/docs/next/installation#usage-with-modals-on-android)
+Import the ImageViewer into a new screen. You can also use a Modal, but you will need to [configure the Gesture Handler on Android](https://docs.swmansion.com/react-native-gesture-handler/docs/next/installation#usage-with-modals-on-android)
 
 ### Example
 
 ```tsx
 import React from "react";
 
-import ImageViewer from "./ImageViewer";
+import ImageViewer from "react-native-reanimated-image-viewer";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
@@ -45,3 +49,13 @@ export default function App() {
 }
 
 ```
+
+### Props ✍️
+
+| Property | Default | Type | Required
+| ---- | ---- | ---- | ----
+| `imageUrl` | `undefined` | `string` | `true`
+| `width` | `undefined` | `number` | `true`
+| `height` | `undefined` | `number` | `true`
+| `onRequestClose` | `undefined` | `() => void` | `true`
+| `onSingleTap` | `undefined` | `() => void` | `false`
