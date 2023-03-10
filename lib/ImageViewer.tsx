@@ -141,8 +141,6 @@ export default function ImageViewer({
 				} else {
 					translateY.value = possibleNewTranslateY;
 				}
-			} else {
-				translateY.value = savedTranslateY.value + event.translationY;
 			}
 		})
 		.onEnd((event) => {
