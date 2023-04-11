@@ -14,6 +14,7 @@ export type ImageViewerProps = {
 	imageUrl: string;
 	width: number;
 	height: number;
+	backgroundColor: string;
 	onRequestClose: () => unknown;
 	onSingleTap?: () => unknown;
 };
@@ -22,6 +23,7 @@ export default function ImageViewer({
 	imageUrl,
 	width,
 	height,
+	backgroundColor,
 	onSingleTap,
 	onRequestClose,
 }: ImageViewerProps) {
@@ -289,7 +291,7 @@ export default function ImageViewer({
 					flex: 1,
 					alignItems: "center",
 					justifyContent: "center",
-					backgroundColor: "#000",
+					backgroundColor: backgroundColor ? backgroundColor : '#000',
 				}}
 			>
 				<Animated.View style={imageContainerAnimatedStyle}>
