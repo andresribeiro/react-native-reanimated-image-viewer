@@ -148,6 +148,8 @@ export default function ImageViewer({
 		.onEnd((event) => {
 			if (scale.value === 1) {
                 const topBoundary = -finalHeight - dimensions.height;
+                const bottomBoundary = dimensions.height + finalHeight;
+
 				if (event.translationY < -50) {
 					if (event.velocityY < -2000 || event.translationY < -200) {
                         translateY.value = withTiming(topBoundary, { duration: 200 }, () => {
@@ -157,6 +159,15 @@ export default function ImageViewer({
 						return;
 					}
 				}
+
+                if (event.translationY > 50) {
+                    if (event.velocityY > 2000 || event.translationY > 200) {
+                        translateY.value = withTiming(bottomBoundary, { duration: 200 }, () => {
+                            runOnJS(onRequestClose)();
+                        });
+                        return;
+                    }
+                }
 
 				translateY.value = withTiming(0);
 				translateX.value = withTiming(0);
