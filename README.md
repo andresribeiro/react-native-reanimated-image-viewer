@@ -14,7 +14,7 @@ https://user-images.githubusercontent.com/63297375/210002857-2ab01afa-420a-40c9-
 
 ### About 🗞️
 
-Uses Reanimated and Gesture Handler under the hood. Created for my social network app, [Drakkle](https://play.google.com/store/apps/details?id=com.andresribeiro.drakkle)
+Uses Reanimated and Gesture Handler under the hood. Created for my social network app, [Rybun](https://rybun.com)
 
 ### Installation ⚙️
 
