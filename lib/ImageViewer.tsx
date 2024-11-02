@@ -17,6 +17,8 @@ export type ImageViewerProps = {
 	onSingleTap?: () => unknown;
 };
 
+const MAX_ZOOM_SCALE = 3;
+
 export default function ImageViewer({
 	imageUrl,
 	width,
@@ -34,8 +36,6 @@ export default function ImageViewer({
 
 	const translateX = useSharedValue(0);
 	const savedTranslateX = useSharedValue(0);
-
-	const MAX_ZOOM_SCALE = 3;
 
 	const { width: finalWidth, height: finalHeight } = useMemo(() => {
 		function ruleOfThree(
