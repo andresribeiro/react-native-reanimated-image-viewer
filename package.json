@@ -33,10 +33,6 @@
     "lint:fix": "rome format . --write",
     "copy:package": "cpx '../package.json' '../build/dist/'"
   },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint",
-    "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-  },
   "config": {
     "commitizen": {
       "path": "cz-emoji"
@@ -53,7 +49,6 @@
     "react-native-gesture-handler": "^2.8.0",
     "react-native-reanimated": "^2.13.0",
     "rome": "^11.0.0",
-    "simple-git-hooks": "^2.8.1",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
