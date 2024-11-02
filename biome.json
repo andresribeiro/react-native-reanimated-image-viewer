@@ -1,0 +1,23 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"complexity": {
+				"useSimplifiedLogicExpression": "off"
+			},
+			"style": {
+				"useSingleVarDeclarator": "off",
+				"useEnumInitializers": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "off",
+				"useAwait": "warn"
+			}
+		}
+	},
+	"files": {
+		"ignore": ["node_modules/*"]
+	}
+}
