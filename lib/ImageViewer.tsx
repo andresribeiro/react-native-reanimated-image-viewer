@@ -68,15 +68,17 @@ export default function ImageViewer({
 				width: smallestScreenDimension,
 				height: smallestScreenDimension,
 			};
-		} else if (width > height) {
-			return resizedBasedOnWidth;
-		} else {
-			if (resizedBasedOnHeight.width > dimensions.width) {
-				return resizedBasedOnWidth;
-			}
-
-			return resizedBasedOnHeight;
 		}
+
+		if (width > height) {
+			return resizedBasedOnWidth;
+		}
+
+		if (resizedBasedOnHeight.width > dimensions.width) {
+			return resizedBasedOnWidth;
+		}
+
+		return resizedBasedOnHeight;
 	}, [width, height, dimensions.width, dimensions.height]);
 
 	const pinchGesture = Gesture.Pinch()
