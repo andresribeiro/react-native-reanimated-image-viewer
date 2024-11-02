@@ -14,7 +14,7 @@ https://user-images.githubusercontent.com/63297375/210002857-2ab01afa-420a-40c9-
 
 ### About 🗞️
 
-Uses Reanimated and Gesture Handler under the hood. Created for my social network app, [Rybun](https://rybun.com)
+Uses Reanimated and Gesture Handler under the hood. Created for my social network app, [Rybun](https://rybun.com).
 
 ### Installation ⚙️
 
@@ -22,17 +22,15 @@ Uses Reanimated and Gesture Handler under the hood. Created for my social networ
 yarn add react-native-reanimated-image-viewer
 ```
 
-You will need [Reanimated](https://github.com/software-mansion/react-native-reanimated) and [Gesture Handler](https://github.com/software-mansion/react-native-gesture-handler) installed in your project
+You will need [Reanimated](https://github.com/software-mansion/react-native-reanimated) and [Gesture Handler](https://github.com/software-mansion/react-native-gesture-handler) installed in your project.
 
 ### Usage 🔨
 
-Import the ImageViewer into a new screen. You can also use a Modal, but you will need to [configure the Gesture Handler on Android](https://docs.swmansion.com/react-native-gesture-handler/docs/next/installation#usage-with-modals-on-android)
+Import the ImageViewer into a new screen. You can also use a Modal, but you will need to [configure the Gesture Handler on Android](https://docs.swmansion.com/react-native-gesture-handler/docs/next/installation#usage-with-modals-on-android).
 
 ### Example
 
 ```tsx
-import React from "react";
-
 import ImageViewer from "react-native-reanimated-image-viewer";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
